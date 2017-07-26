@@ -1,4 +1,4 @@
-package com.blueicon.gpsblueicon.activities;
+package com.blueicon.gpsblueicon.activities.controller;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

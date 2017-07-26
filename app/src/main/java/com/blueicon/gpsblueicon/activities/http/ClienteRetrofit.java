@@ -14,6 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class ClienteRetrofit {
+
     private static Retrofit mretrofit = null;
 
 

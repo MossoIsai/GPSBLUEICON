@@ -4,5 +4,7 @@
     <color name="colorPrimaryDark">#188a70</color>
     <color name="colorAccent">#1e7d8b</color>
     <color name="rosa">#34b952</color>
+    <color name="azul">#20bbcc</color>
+    <color name="azul2">#6420bbcc</color>
 
 </resources>

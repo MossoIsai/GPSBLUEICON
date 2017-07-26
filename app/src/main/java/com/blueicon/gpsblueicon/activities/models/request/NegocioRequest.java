@@ -1,4 +1,4 @@
-package com.blueicon.gpsblueicon.activities.http;
+package com.blueicon.gpsblueicon.activities.models.request;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -49,6 +49,21 @@ public class NegocioRequest {
     @Expose
     private boolean servicioDomicilio;
 
+    public NegocioRequest() {
+    }
+
+    public NegocioRequest(int id, String nombre, String latitud, String longitud, String direccion, String telefonoPrincipal, String telefonoSecundario, String descripcion, String horario, boolean servicioDomicilio) {
+        this.id = id;
+        this.nombre = nombre;
+        this.latitud = latitud;
+        this.longitud = longitud;
+        this.direccion = direccion;
+        this.telefonoPrincipal = telefonoPrincipal;
+        this.telefonoSecundario = telefonoSecundario;
+        this.descripcion = descripcion;
+        this.horario = horario;
+        this.servicioDomicilio = servicioDomicilio;
+    }
 
     public int getId() {
         return id;

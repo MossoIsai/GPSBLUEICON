@@ -18,16 +18,16 @@
         android:theme="@style/AppTheme">
 
         <meta-data
-            android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDD7Zs0Lzcbao-OL6M51prpmD3VmfhSCH8" />
+            android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCXjOVR6t8L9nGOilkRNbZ8jaQxuEXFx9A" />
 
-        <activity android:name=".activities.LoginActivity">
+        <activity android:name=".activities.controller.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.ListaNegocios"/>
-        <activity android:name=".activities.LevantarCoordenadas"/>
+        <activity android:name=".activities.controller.ListaNegocios"/>
+        <activity android:name=".activities.controller.LevantarCoordenadas"/>
     </application>
 </manifest>

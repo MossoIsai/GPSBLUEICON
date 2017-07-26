@@ -1,8 +1,10 @@
 package com.blueicon.gpsblueicon.activities.tools;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
+import android.view.inputmethod.InputMethodManager;
 
 /**
  * Created by developer on 24/07/17.
@@ -22,10 +24,15 @@ public class Constantes {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
-
                     }
                 });
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+    }
+    public static void hideKeyboard(Activity activity) {
+        if (activity != null && activity.getWindow() != null && activity.getWindow().getDecorView() != null) {
+            InputMethodManager imm = (InputMethodManager)activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(activity.getWindow().getDecorView().getWindowToken(), 0);
+        }
     }
 }
