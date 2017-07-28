@@ -139,22 +139,8 @@ public class LevantarCoordenadas extends AppCompatActivity implements OnMapReady
             }
         }
             System.out.println("HORARIO FINAL: "+textViewHorario.getText());
+        armarHorario("1@9:00-12:00|2@9:00-12:00|3@9:00-12:00|4@9:00-12:00|5@9:00-12:00|1@14:00-16:00|2@14:00-16:00|3@14:00-16:00|4@14:00-16:00|5@14:00-16:00");
 
-        /** HttpNegocios httpNegocios = ClienteRetrofit.getSharedInstance().create(HttpNegocios.class);
-         Call<SuccesResponse> responseCall = httpNegocios.sendNegocio(new NegocioRequest());
-         responseCall.enqueue(new Callback<SuccesResponse>() {
-        @Override public void onResponse(Call<SuccesResponse> call, Response<SuccesResponse> response) {
-        if (response.body().isEstatus()) {
-        System.out.println("Response: "+response.body().isEstatus());
-        } else {
-        System.out.println("Response : "+response.body().isEstatus());
-        }
-        }
-
-        @Override public void onFailure(Call<SuccesResponse> call, Throwable t) {
-
-        }
-        });**/
     }
 
     @Override
@@ -362,11 +348,25 @@ public class LevantarCoordenadas extends AppCompatActivity implements OnMapReady
         };
     }
 
-   /* public String armarHorario(String cadena){
-         String[] diaCompleto = cadena.split("|");
-         System.out.println("DiaCompleto");
+    public String armarHorario(String cadena){
+         String[] diaCompleto = cadena.split("\\|");
+        for (int i = 0; i < diaCompleto.length; i++){
+                for(int j=0;j<diaCompleto.length-1;j++){
+                    if(!diaCompleto[i].equals(diaCompleto[j+1])) {
+                        if (diaCompleto[i].charAt(0) == diaCompleto[j+1].charAt(0)) {
+                            // eliminamos su valor
+                            System.out.println("Somo iguales: " + diaCompleto[i] + " ----->" + diaCompleto[j+1]);
+                            String secondHorario = diaCompleto[j+1].substring(1,diaCompleto[j+1].length());
+                            System.out.println("listona: "+diaCompleto[i]+secondHorario+"|");
+                        } else {
+                            System.out.println("No Somo iguales");
+                        }
+                    }
 
-    }*/
+                }
+        }
+      return  "";
+    }
 
 
 }
