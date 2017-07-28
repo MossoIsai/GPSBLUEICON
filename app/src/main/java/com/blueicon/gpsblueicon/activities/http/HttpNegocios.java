@@ -1,6 +1,7 @@
 package com.blueicon.gpsblueicon.activities.http;
 
 import com.blueicon.gpsblueicon.activities.models.request.NegocioRequest;
+import com.blueicon.gpsblueicon.activities.models.response.NegocioMain;
 import com.blueicon.gpsblueicon.activities.models.response.SuccesResponse;
 
 import retrofit2.Call;
@@ -14,9 +15,13 @@ import retrofit2.http.POST;
 
 public interface HttpNegocios {
 
-    @POST("Negocio/Temporal")
+    /*@POST("NegocioTemporal/listado")
     @Headers("Accept: application/json")
-    Call<SuccesResponse> sendaNegocio(@Body NegocioRequest negocioRequest);
+    Call<SuccesResponse> sendNegocio(@Body NegocioRequest negocioRequest);*/
 
+
+    @POST("NegocioTemporal/Listado")
+    @Headers("Accept: application/json")
+    Call<NegocioMain> obtenerNegocios();
 
 }

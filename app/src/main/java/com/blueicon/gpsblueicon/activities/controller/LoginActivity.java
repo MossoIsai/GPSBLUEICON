@@ -22,13 +22,14 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.btnSend) Button btnEnter;
 
     @OnClick(R.id.btnSend) void eventEnter(){
+
         String user =  usuario.getText().toString();
         String pwd =  password.getText().toString();
 
         if(user.equals("blueicon") || pwd.equals("2468")) {
             Constantes.messageDialog("GPS", "Llena por favor los campos requeridos", this);
         }else {
-            Intent intent = new Intent(this, LevantarCoordenadas.class);
+            Intent intent = new Intent(this, ListaNegocios.class);
             startActivity(intent);
         }
     }

@@ -11,7 +11,8 @@ import android.view.inputmethod.InputMethodManager;
  */
 
 public class Constantes {
-    public static final String BASE_URL = "";
+   // public static final String BASE_URL = "http://192.168.2.77:91/api/";
+    public static final String BASE_URL = "http://api.distritosonata.com/api/";
 
     /** :::::: Metodo que lanza un AlertDialog ::::::**/
     public static void messageDialog(String title, String message, Context context) {

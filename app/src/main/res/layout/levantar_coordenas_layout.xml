@@ -2,12 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="10dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
 
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    <!--<fragment xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/mapa"
         class="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical" />-->
+
+    <com.google.android.gms.maps.MapView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapa"
+        class="com.google.android.gms.maps.MapView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:orientation="vertical" />
@@ -41,7 +48,6 @@
 
                 <EditText
                     android:id="@+id/addressNegocio"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -56,7 +62,6 @@
 
                 <EditText
                     android:id="@+id/phonePrincipal"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -71,7 +76,6 @@
 
                 <EditText
                     android:id="@+id/phoneSecundario"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -96,7 +100,6 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp">
 
@@ -107,53 +110,131 @@
                     android:layout_margin="5dp"
                     android:hint="Descricpion" />
             </LinearLayout>
-            <LinearLayout
-                android:layout_margin="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/listaDias"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="7"
-            android:layout_margin="5dp">
-
-            <Button
-                android:id="@+id/btnHorario"
-                android:text="Agregar Horario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            </LinearLayout>
-
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="7"
                 android:layout_margin="5dp">
+
+                <EditText
+                    android:id="@+id/facebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="Facebook" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <EditText
+                    android:id="@+id/twitter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="Twitter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:text="Giro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+                <Spinner
+                    android:spinnerMode="dialog"
+                    android:textSize="20sp"
+                    android:id="@+id/spinnerGiro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:text="Estacionamiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+                <Spinner
+                    android:id="@+id/spinnerEstacinamiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <Button
+                    android:id="@+id/btnHorario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar Horario" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="7">
 
                 <GridView
                     android:id="@+id/gridHorario"
-                    android:numColumns="7"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:numColumns="7" />
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerHorario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textHorario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
 
             <LinearLayout
-                android:layout_marginBottom="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:layout_marginBottom="5dp">
 
                 <Button
                     android:id="@+id/btnSave"
@@ -164,6 +245,7 @@
                     android:text="GUARDAR"
                     android:textColor="#ffffff"
                     android:textStyle="bold" />
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

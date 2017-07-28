@@ -18,6 +18,7 @@ import java.util.List;
  */
 
 public class AdapterGridView extends ArrayAdapter<Horario> {
+
     private List<Horario> horarios;
 
 

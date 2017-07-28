@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="giro_array">
+        <item>Moda, Belleza</item>
+        <item>Salud, Fitness</item>
+        <item>Dónde Comer</item>
+        <item>Cafeterías / Postrerías</item>
+        <item>Vida Nocturna</item>
+        <item>Entretenimiento</item>
+        <item>Servicios</item>
+        <item>Hogar</item>
+        <item>Regalos y novedades</item>
+        <item>Tecnología</item>
+        <item>Tiendas departamentales</item>
+        <item>Miscelaneas y Autoservicios</item>
+        <item>Market</item>
+        <item>Truck Market</item>
+    </string-array>
+
+    <string-array name="estacionamiento_array">
+        <item>De la Plaza</item>
+        <item>Frontal</item>
+        <item>Techado</item>
+        <item>No tiene</item>
+    </string-array>
+</resources>
